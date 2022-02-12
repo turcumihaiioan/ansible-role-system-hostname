@@ -1,0 +1,8 @@
+---
+- name: ensuring hostname
+  ansible.builtin.hostname:
+    name: "{{ system_hostname['name'] }}"
+    use: "{{ system_hostname['use'] | default(omit) }}"
+  when:
+    - system_hostname is defined
+    - system_hostname['name'] is defined
