@@ -11,7 +11,7 @@ ansible >= 2.10
 Role Variables
 --------------
 
-```
+```yml
 system_hostname:
   name: ...
   use: ...
@@ -26,7 +26,7 @@ Example Playbook
 ----------------
 
 #### Set a hostname:
-```
+```yml
 - hosts: servers
   vars:
     system_hostname:
@@ -36,7 +36,7 @@ Example Playbook
 ```
 
 #### Set a hostname specifying strategy:
-```
+```yml
 - hosts: servers
   vars:
     system_hostname:
